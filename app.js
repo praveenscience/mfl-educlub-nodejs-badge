@@ -5,9 +5,8 @@ const Students = fs.readFileSync("./students.csv");
 const StudentsArr = Students.toString().split(`
 `);
 
-let loadedImage;
-
 const PrintTicket = (File, Text) => {
+  let loadedImage;
   return Jimp.read("ticket.png")
     .then(image => {
       loadedImage = image;
