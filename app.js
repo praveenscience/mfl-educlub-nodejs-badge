@@ -7,4 +7,8 @@ StudentsArr.forEach(stuName => {
   console.log(`Printing Certificate for ${stuName}`);
 });
 
-Jimp.read("./ticket.png");
+let loadedImage;
+Jimp.read("./ticket.png").then(image => {
+  loadedImage = image;
+  return Jimp.loadFont(Jimp.FONT_SANS_64_BLACK);
+});
