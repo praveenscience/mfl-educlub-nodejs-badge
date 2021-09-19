@@ -5,7 +5,7 @@ const Students = fs.readFileSync("./students.csv");
 const StudentsArr = Students.toString().split(`
 `);
 
-const PrintTicket = (File, Text) => {
+const PrintTicket = (FileName, Text) => {
   let loadedImage;
   return Jimp.read("ticket.png")
     .then(image => {
@@ -26,7 +26,7 @@ const PrintTicket = (File, Text) => {
           1000,
           50
         )
-        .write(File);
+        .write("./Badges/" + FileName);
     });
 };
 
