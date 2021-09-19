@@ -32,7 +32,7 @@ const PrintTicket = (File, Text) => {
 };
 
 const main = async () => {
-  StudentsArr.forEach(stuName => {
+  StudentsArr.forEach(async stuName => {
     console.log(`Priting Certificate for ${stuName}`);
     await PrintTicket(stuName.trim().replace(/\s/g, "-") + ".png", stuName);
   });
