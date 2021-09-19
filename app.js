@@ -15,6 +15,17 @@ Jimp.read("./ticket.png")
   })
   .then(font => {
     loadedImage
-      .print(font, 860, 290, "Here Lies your Name!")
+      .print(
+        font,
+        450,
+        290,
+        {
+          text: "Hello!",
+          alignmentX: Jimp.HORIZONTAL_ALIGN_CENTER,
+          alignmentY: Jimp.VERTICAL_ALIGN_MIDDLE
+        },
+        1080,
+        50
+      )
       .write("PrintedTicket.png");
   });
