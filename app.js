@@ -15,6 +15,6 @@ Jimp.read("./ticket.png")
   })
   .then(font => {
     loadedImage
-      .print(font, 15, 15, "Here Lies your Name!")
+      .print(font, 860, 290, "Here Lies your Name!")
       .write("PrintedTicket.png");
   });
